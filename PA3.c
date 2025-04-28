@@ -28,24 +28,25 @@ int parse_int(char*);
  */
 
 long roadsAndLibraries(int n, int c_lib, int c_road, int cities_rows, int cities_columns, int** cities) {
-
+    
 }
 
 int main()
 {
     FILE* fptr = fopen(getenv("OUTPUT_PATH"), "w");
-
+    //q represents querries, or routes to all cities
     int q = parse_int(ltrim(rtrim(readline())));
 
     for (int q_itr = 0; q_itr < q; q_itr++) {
+
         char** first_multiple_input = split_string(rtrim(readline()));
-
+        //n is the number of cities(vertices)
         int n = parse_int(*(first_multiple_input + 0));
-
+        //m is the number of roads(edges)
         int m = parse_int(*(first_multiple_input + 1));
-
+        //the cost to make a library(weight)
         int c_lib = parse_int(*(first_multiple_input + 2));
-
+        //the cost to make a road
         int c_road = parse_int(*(first_multiple_input + 3));
 
         int** cities = malloc(m * sizeof(int*));
